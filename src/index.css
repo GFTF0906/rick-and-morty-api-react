@@ -3,5 +3,13 @@
 @tailwind utilities;
 
 body {
-  @apply flex items-center justify-center flex-col bg-gradient-to-br from-gray-300 to-gray-200 sm:min-h-screen;
+  @apply flex items-center justify-center flex-col text-[#F5F5F5] bg-gradient-to-br from-gray-800 to-gray-900 sm:min-h-screen;
+}
+
+.subheading {
+  @apply text-lg font-semibold capitalize;
+}
+
+.bold-subheading {
+  @apply font-bold text-xl;
 }
