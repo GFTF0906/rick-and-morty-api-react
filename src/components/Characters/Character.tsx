@@ -1,6 +1,7 @@
 import { TCharacter } from '../../types/CharacterType';
 import { Subheading } from '../Headings/Subheading';
 import { Title } from '../Headings/Title';
+import { HorizontalRow } from '../Rows/HorizontalRow';
 
 export const Character = ({
   episode,
@@ -20,7 +21,7 @@ export const Character = ({
 
       <div className="p-6">
         <Title text={name} className={'text-2xl font-bold'} />
-        <hr className="border-1 border-gray-900 pb-5" />
+        <HorizontalRow />
 
         <div className="grid grid-cols-2 sm:flex sm:flex-col">
           <Subheading text="Status" className="bold-subheading" />
