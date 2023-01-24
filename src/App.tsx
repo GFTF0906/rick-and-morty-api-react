@@ -1,18 +1,20 @@
-import { Characters } from './components/Characters/';
+import { Routes, Route } from 'react-router-dom';
+
 import { Header } from './components/Header';
 
-import { useFetchAll } from './hooks/useFetchAll';
+import { Home } from './pages/Home';
+import { CharactersPage } from './pages/CharactersPage';
+import { LocationsPage } from './pages/LocationsPage';
 
 export const App = () => {
-  const { data, isLoading, isError } = useFetchAll();
-
-  if (isLoading) return <h2>Loading...</h2>;
-  if (isError) return <h2>Error on fetching data.</h2>;
-
   return (
-    <main className="w-full flex justify-center items-center flex-col gap-12">
+    <main className="flex flex-col gap-8">
       <Header />
-      {data && <Characters results={data?.results} />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/characters" element={<CharactersPage />} />
+        <Route path="/locations" element={<LocationsPage />} />
+      </Routes>
     </main>
   );
 };

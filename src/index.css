@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply flex items-center justify-center flex-col text-[#F5F5F5] bg-gradient-to-br from-gray-800 to-gray-900 sm:min-h-screen;
+  @apply text-[#F5F5F5] bg-gradient-to-br from-gray-800 to-gray-900 sm:min-h-screen;
 }
 
 .subheading {
