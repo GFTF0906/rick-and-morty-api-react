@@ -1,6 +1,6 @@
 import { TInfo } from './InfoType';
 
 export type ApiResponse<T> = {
-  info: TInfo;
+  info?: TInfo;
   results: T;
 };
