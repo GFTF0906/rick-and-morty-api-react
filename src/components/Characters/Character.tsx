@@ -6,7 +6,6 @@ import { HorizontalRow } from '../Rows/HorizontalRow';
 
 export const Character = ({
   id,
-  episode,
   gender,
   image,
   location,

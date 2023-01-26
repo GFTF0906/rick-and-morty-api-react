@@ -23,7 +23,7 @@ export const Home = () => {
         />
       </section>
 
-      <p className="text-2xl pb-8 fony-bold">
+      <p className="text-2xl pb-8 font-semibold">
         This project was developed, using...
       </p>
 

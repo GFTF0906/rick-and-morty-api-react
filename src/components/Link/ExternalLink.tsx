@@ -5,7 +5,7 @@ export const ExternalLink = ({
 }: {
   text: string;
   url: string;
-  icon: JSX.Element;
+  icon?: JSX.Element;
 }) => {
   return (
     <>
