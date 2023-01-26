@@ -1,20 +1,12 @@
-import { Link } from 'react-router-dom';
+import { NavbarListItem } from './NavbarListItem';
 
 export const NavbarList = () => {
   return (
     <ul className="hidden sm:flex sm:items-center sm:justify-center sm:gap-4">
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/characters">Characters</Link>
-      </li>
-      <li>
-        <Link to="/locations">Locations</Link>
-      </li>
-      <li>
-        <Link to="/episodes">Episodes</Link>
-      </li>
+      <NavbarListItem linkLocation="/" text="Home" />
+      <NavbarListItem linkLocation="/characters" text="Characters" />
+      <NavbarListItem linkLocation="/locations" text="Locations" />
+      <NavbarListItem linkLocation="/episodes" text="Episodes" />
     </ul>
   );
 };

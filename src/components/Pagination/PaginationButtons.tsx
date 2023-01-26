@@ -1,27 +1,32 @@
 import { Dispatch, SetStateAction } from 'react';
 import { ApiResponse } from '../../types/ApiResponseType';
-import { TCharacter } from '../../types/CharacterType';
-import { TEpisode } from '../../types/EpisodeType';
-import { TLocation } from '../../types/LocationType';
+import { AppTypes } from '../../types/UnionAppTypes';
+import { ArrowLeft, ArrowRight } from '../svgs';
 
 export function PaginationButtons<
   T extends {
-    data: ApiResponse<TCharacter[] | TEpisode[] | TLocation[]>;
+    data: ApiResponse<AppTypes>;
     setCurrentPageId: Dispatch<SetStateAction<number>>;
   }
 >({ data, setCurrentPageId }: T) {
   return (
-    <div>
+    <section className="absolute right-60 top-40 flex items-center gap-2">
       {data?.info?.prev && (
-        <button onClick={() => setCurrentPageId((prevState) => prevState - 1)}>
-          PREV
-        </button>
+        <div
+          onClick={() => setCurrentPageId((prevState) => prevState - 1)}
+          className="cursor-pointer"
+        >
+          <ArrowLeft />
+        </div>
       )}
       {data?.info?.next && (
-        <button onClick={() => setCurrentPageId((prevState) => prevState + 1)}>
-          NEXT
-        </button>
+        <div
+          onClick={() => setCurrentPageId((prevState) => prevState + 1)}
+          className="cursor-pointer"
+        >
+          <ArrowRight />
+        </div>
       )}
-    </div>
+    </section>
   );
 }

@@ -16,4 +16,6 @@ export type TCharacter = {
   status: string;
   type: string;
   url: string;
+  className?: string;
+  imageStyles?: string;
 };

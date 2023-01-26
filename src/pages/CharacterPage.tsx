@@ -2,8 +2,8 @@ import { useParams } from 'react-router-dom';
 
 import { TCharacter } from '../types/CharacterType';
 
-import { useFetchData } from '../hooks/useFetchData';
 import { Character } from '../components/Characters/Character';
+import { useFetchData } from '../hooks/useFetchData';
 
 export const CharacterPage = () => {
   const { id } = useParams();
@@ -16,8 +16,8 @@ export const CharacterPage = () => {
   if (isError) return <h3>Error on fetching data.</h3>;
 
   return (
-    <section className="px-60 text-gray-900">
-      {data && <Character {...data} />}
+    <section className="flex items-center justify-center flex-col px-60 text-gray-900">
+      {data && <Character {...data} className="w-1/3" imageStyles="w-full" />}
     </section>
   );
 };
