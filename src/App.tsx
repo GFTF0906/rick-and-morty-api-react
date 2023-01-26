@@ -17,26 +17,25 @@ export const App = () => {
     <main className="flex flex-col gap-10">
       <Header />
 
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-
-          <Route path="/characters">
-            <Route index element={<CharactersPage />} />
-            <Route path=":id" element={<CharacterPage />} />
+      <section className="flex items-center justify-center flex-col pb-4">
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="/characters">
+              <Route index element={<CharactersPage />} />
+              <Route path=":id" element={<CharacterPage />} />
+            </Route>
+            <Route path="/locations">
+              <Route index element={<LocationsPage />} />
+              <Route path=":id" element={<LocationPage />} />
+            </Route>
+            <Route path="/episodes">
+              <Route index element={<EpisodesPage />} />
+              <Route path=":id" element={<EpisodePage />} />
+            </Route>
           </Route>
-
-          <Route path="/locations">
-            <Route index element={<LocationsPage />} />
-            <Route path=":id" element={<LocationPage />} />
-          </Route>
-
-          <Route path="/episodes">
-            <Route index element={<EpisodesPage />} />
-            <Route path=":id" element={<EpisodePage />} />
-          </Route>
-        </Route>
-      </Routes>
+        </Routes>
+      </section>
     </main>
   );
 };

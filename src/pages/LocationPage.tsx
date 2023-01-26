@@ -1,6 +1,9 @@
 import { useParams } from 'react-router-dom';
 
+import { Error } from '../components/Error';
+import { Loading } from '../components/Loading';
 import { Location } from '../components/Locations/Location';
+import { ButtonGoBack } from '../components/Navigation/ButtonGoBack';
 
 import { useFetchData } from '../hooks/useFetchData';
 import { TLocation } from '../types/LocationType';
@@ -12,11 +15,12 @@ export const LocationPage = () => {
     `https://rickandmortyapi.com/api/location/${id}`
   );
 
-  if (isLoading) return <h3>Loading...</h3>;
-  if (isError) return <h3>Error on fetching data.</h3>;
+  if (isLoading) return <Loading />;
+  if (isError) return <Error />;
 
   return (
-    <section className="flex items-center justify-center flex-col px-60 text-gray-900">
+    <section className="flex items-center justify-center flex-col self-center px-60 text-gray-900">
+      <ButtonGoBack />
       {data && <Location {...data} />}
     </section>
   );

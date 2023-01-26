@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Episodes } from '../components/Episodes';
+import { Error } from '../components/Error';
+import { Loading } from '../components/Loading';
 import { PaginationButtons } from '../components/Pagination/PaginationButtons';
+
 import { useFetchData } from '../hooks/useFetchData';
+
 import { ApiResponse } from '../types/ApiResponseType';
 import { TEpisode } from '../types/EpisodeType';
 
@@ -14,8 +18,8 @@ export const EpisodesPage = () => {
     currentPageID
   );
 
-  if (isLoading) return <h3>Loading...</h3>;
-  if (isError) return <h3>Error on fetching data.</h3>;
+  if (isLoading) return <Loading />;
+  if (isError) return <Error />;
 
   return (
     <section className="w-full flex justify-center items-center flex-col p-4 gap-8">

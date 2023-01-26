@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+
 import { TCharacter } from '../../types/CharacterType';
+
 import { Subheading } from '../Headings/Subheading';
 import { Title } from '../Headings/Title';
+
 import { HorizontalRow } from '../Rows/HorizontalRow';
 
 export const Character = ({
@@ -17,12 +20,15 @@ export const Character = ({
   className,
   imageStyles,
 }: TCharacter) => {
+  const customStyles = className ? className : '';
+  const customImageStyles = imageStyles ? imageStyles : '';
+
   return (
-    <div className={'bg-gray-200 ' + className ?? ''}>
+    <article className={'bg-gray-200 rounded ' + customStyles}>
       <img
         src={image}
         alt={`${name} Image`}
-        className={'rounded-t ' + imageStyles ?? ''}
+        className={'rounded-t ' + customImageStyles}
       />
 
       <div className="p-6">
@@ -51,6 +57,6 @@ export const Character = ({
           <Subheading text={species} />
         </div>
       </div>
-    </div>
+    </article>
   );
 };

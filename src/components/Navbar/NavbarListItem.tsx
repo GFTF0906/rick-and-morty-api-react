@@ -9,7 +9,7 @@ export const NavbarListItem = ({
 }) => {
   return (
     <li>
-      <Link to={linkLocation} className="font-bold hover:opacity-80">
+      <Link to={linkLocation} className="font-bold hover:opacity-70">
         {text}
       </Link>
     </li>
