@@ -1,18 +1,15 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { NavbarContext } from '../../context/NavbarContext';
 import { BackgroundBlur } from '../BackgroundBlur';
 import { HamburgerMenu } from '../HamburgerMenu';
 import { Title } from '../Headings/Title';
 import { MobileMenu } from '../MobileMenu';
 import { MobileNavbar } from './MobileNavbar';
 import { NavbarList } from './NavbarList';
-
+('');
 export const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prevState) => !prevState);
-  };
+  const { isMobileMenuOpen } = useContext(NavbarContext);
 
   return (
     <nav
@@ -26,12 +23,12 @@ export const Navbar = () => {
         />
       </Link>
       {<NavbarList />}
-      {!isMobileMenuOpen && (
-        <HamburgerMenu toggleMobileMenu={toggleMobileMenu} />
-      )}
+
+      {!isMobileMenuOpen && <HamburgerMenu />}
+
       {isMobileMenuOpen && (
         <>
-          <BackgroundBlur toggleMobileMenu={toggleMobileMenu} />
+          <BackgroundBlur />
           <MobileMenu children={<MobileNavbar />} />
         </>
       )}

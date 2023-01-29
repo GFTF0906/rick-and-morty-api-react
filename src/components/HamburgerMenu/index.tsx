@@ -1,8 +1,9 @@
-type HamburgerMenuProps = {
-  toggleMobileMenu: () => void;
-};
+import { useContext } from 'react';
+import { NavbarContext } from '../../context/NavbarContext';
 
-export const HamburgerMenu = ({ toggleMobileMenu }: HamburgerMenuProps) => {
+export const HamburgerMenu = () => {
+  const { toggleMobileMenu } = useContext(NavbarContext);
+
   return (
     <svg
       viewBox="0 0 24 24"
