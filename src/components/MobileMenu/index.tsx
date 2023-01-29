@@ -1,9 +1,16 @@
+import { motion } from 'framer-motion';
+
 export const MobileMenu = ({ children }: { children: JSX.Element }) => {
   return (
     <>
-      <section className="fixed right-0 top-0 w-1/2 h-full z-20 p-10 bg-gray-900 sm:hidden">
+      <motion.section
+        key="Mobile Menu"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, x: 20 }}
+        className="fixed right-0 top-0 w-[60%] h-full z-20 pl-2 pr-16 py-10 bg-gray-900 sm:hidden"
+      >
         {children}
-      </section>
+      </motion.section>
     </>
   );
 };

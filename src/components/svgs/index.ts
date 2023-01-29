@@ -1,5 +1,9 @@
 import { ArrowLeft } from './ArrowLeft';
 import { ArrowRight } from './ArrowRight';
+import { Episode } from './Episode';
+import { Home } from './Home';
+import { Location } from './Location';
+import { Person } from './Person';
 import { ReactIcon } from './ReactIcon';
 import { ReactQueryIcon } from './ReactQueryIcon';
 import { ReactRouterIcon } from './ReactRouterIcon';
@@ -16,4 +20,8 @@ export {
   RickMortyAPIIcon,
   ArrowLeft,
   ArrowRight,
+  Person,
+  Location,
+  Home,
+  Episode,
 };
