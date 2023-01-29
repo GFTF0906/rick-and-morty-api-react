@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply text-[#F5F5F5] bg-gradient-to-br from-gray-800 to-gray-900 sm:min-h-screen;
+  @apply text-[#F5F5F5] bg-gray-800 sm:bg-gradient-to-br sm:from-gray-800 sm:to-gray-900 sm:min-h-screen;
 }
 
 .subheading {
