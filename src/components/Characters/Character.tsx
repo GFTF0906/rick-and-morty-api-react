@@ -28,7 +28,7 @@ export const Character = ({
       <img
         src={image}
         alt={`${name} Image`}
-        className={'rounded-t ' + customImageStyles}
+        className={'rounded-t w-full ' + customImageStyles}
       />
 
       <div className="p-6">

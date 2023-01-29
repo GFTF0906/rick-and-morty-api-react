@@ -10,7 +10,7 @@ export function PaginationButtons<
   }
 >({ data, setCurrentPageId }: T) {
   return (
-    <section className="absolute right-60 top-40 flex items-center gap-2">
+    <section className="flex items-center gap-2">
       {data?.info?.prev && (
         <div
           onClick={() => setCurrentPageId((prevState) => prevState - 1)}

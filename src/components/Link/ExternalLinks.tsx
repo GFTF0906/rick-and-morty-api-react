@@ -10,7 +10,7 @@ import { ExternalLink } from './ExternalLink';
 
 export const ExternalLinks = () => {
   return (
-    <section className="flex gap-4">
+    <section className="flex flex-col gap-4 md:grid md:grid-cols-2 md:grid-rows-3 lg:grid-cols-2 xl:flex xl:flex-row">
       <ExternalLink
         text="React"
         url="https://reactjs.org/"
